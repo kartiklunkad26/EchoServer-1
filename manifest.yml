@@ -1,0 +1,11 @@
+---
+applications:
+- name: echoserver
+  memory: 512M 
+  instances: 1
+  domain: tcp.local.pcfdev.io
+  health-check-type: none
+  path: ./out/artifacts/EchoServer_jar/EchoServer.jar
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services: []
